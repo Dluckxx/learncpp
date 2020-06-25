@@ -1,12 +1,20 @@
 //
-// Created by 杜铁生 on 2020/6/22.
+// Created by 杜铁生 on 2020/6/25.
 //
+
 #include <iostream>
 #include <vector>
+#include <string>
 
 using namespace std;
 
-int main(int argc, char *argv[]) {
+void initStringFromVector(){
+    vector<char> stringVector{'h', 'e', 'l', 'l', 'o'};
+    string str(stringVector.begin(), stringVector.end());
+    cout << "Vector to string is: " << str << endl;
+}
+
+void vectorIncrease(){
     vector<int> container(10, 1);
     cout << "size: " << container.size()
          << " capacity: " << container.capacity()
@@ -49,5 +57,9 @@ int main(int argc, char *argv[]) {
     cout << "size: " << container.size()
          << " capacity: " << container.capacity()
          << endl;
+}
+
+int main(int argc, char *argv[]) {
+
     return 0;
 }
