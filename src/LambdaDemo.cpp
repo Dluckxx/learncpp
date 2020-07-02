@@ -26,12 +26,12 @@ void catchSum() {
 }
 
 // Usage of partition and for_each.
-void StablePartition(){
+void StablePartition() {
     vector<string> vec{"do", "you", "need", "partition", "?"};
-    auto iter = stable_partition(vec.begin(), vec.end(), [](const string& str){
+    auto iter = stable_partition(vec.begin(), vec.end(), [](const string &str) {
         return str.size() < 3;
     });
-    for_each(iter, vec.end(), [](const string &s){
+    for_each(iter, vec.end(), [](const string &s) {
         cout << s << endl;
     });
 }

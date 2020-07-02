@@ -8,7 +8,13 @@
 
 using namespace std;
 
-int main(int argc, char *argv[]) {
+int fun(int a, int b) {
+    a = 10;
+    cout << a << " - " << b << endl;
+    return a + b;
+}
 
+int main(int argc, char *argv[]) {
+    cout << fun(1, 2) << endl;
     return 0;
 }
