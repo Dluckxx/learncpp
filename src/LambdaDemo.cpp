@@ -36,6 +36,17 @@ void StablePartition() {
     });
 }
 
+// Note:none declare return type lambda do not get a compile error when include other segment.
+void returnTest() {
+    vector<int> vec(10, -5);
+    vector<int> tar(10);
+    // if segment may not get an error here.
+    transform(vec.begin(),vec.end(),tar.begin(),[](int i) {
+        if (i > 0) return i;
+        else return -i;
+    });
+}
+
 int main(int argc, char *argv[]) {
     return 0;
 }
